@@ -1,0 +1,17 @@
+Simple spreadsheet
+Create a simple spreadsheet editor.
+Implement the following functionality:
+    cells can enter simple expressions (like in a calculator) and the functionality e.g. SIN, ABS [Ex. A2 = sin (B2) + 1].
+    Editor detects cycles and does not permit the entering of expression that would end up in a cycle.
+    Editor allows processing expressions containing parenthesis for example: ((A1+5)/B5)-A5 or containing more functions applicable to columns / rows / regions of type AVG, SUM, etc. [Ex. A2 = SUM(B1:B20)]
+Cells must change their content based on changes in referenced cells.
+Cell must detect cycles and must not allow to create an expression that would introduce such a cycle.
+The result table must support serialization (i.e. saving its content to a file) and deserialization (i.e. loading content from a file). Design appropriate representation.
+Cells must support at least one of the following features:
+    process parenthesized expression
+    aggregate functions across columns, rows and areas, e.g.: avg(A2:A8), max(B1:C10)
+    draw a graph across columns, rows or areas
+Utilization of polymorphism (recommended)
+    cell types: number, string, expression, function etc
+    graphical user interface: command line, ncurses, SDL, OpenGL
+    various types of graphs
